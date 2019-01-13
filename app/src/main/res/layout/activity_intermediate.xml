@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IntermediateActivity"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:textSize="35sp"
+        android:text="Welcome"
+        android:layout_marginTop="20dp"
+        android:id="@+id/welcome"
+        android:textColor="@color/red"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_below="@+id/welcome"
+        android:text="Your Registration-No :"
+        android:layout_marginTop="20dp"
+        android:id="@+id/RegnoTV"
+        android:textColor="@color/red"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabCustomSize="70dp"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_center_focus_strong_black_24dp"
+        android:scaleType="fitXY"
+        app:maxImageSize="50dp"
+        android:clickable="true"
+        android:id="@+id/scanbtn"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:textSize="28sp"
+        android:layout_centerInParent="true"
+        android:text="Tap to Scan "
+        android:layout_below="@+id/scanbtn"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/red"
+        android:id="@+id/as"
+        />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/as"
+        android:id="@+id/sb"
+        ></FrameLayout>
+</RelativeLayout>

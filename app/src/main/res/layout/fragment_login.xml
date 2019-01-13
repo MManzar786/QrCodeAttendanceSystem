@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".RegisterActivity"
+    android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Log In! "
+            android:textColor="@color/red"
+            android:textSize="50sp"
+            android:fontFamily="cursive"
+            android:textAlignment="center"
+            android:id="@+id/login"
+            android:layout_marginTop="50dp"
+
+            />
+
+        <EditText
+            android:id="@+id/loginRegNo"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/ic_email_black_24dp"
+            android:drawablePadding="5dp"
+            android:hint="16s-16"
+            android:padding="10dp"
+            android:textColor="@color/red"
+            android:textColorHint="@color/red"
+            android:textSize="20sp"
+            android:inputType="textEmailAddress"
+            />
+
+        <EditText
+            android:id="@+id/loginPass"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loginRegNo"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
+            android:drawablePadding="5dp"
+            android:padding="10dp"
+            android:hint="Password"
+            android:textColorHint="@color/red"
+            android:textColor="@color/red"
+            android:textSize="20sp"
+            android:inputType="textPassword"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log In"
+            android:textSize="20sp"
+            android:background="@drawable/rounded"
+            android:textColor="@color/white"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/loginPass"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="110dp"
+            android:paddingRight="110dp"
+            android:textAllCaps="false"
+            android:clickable="true"
+            android:drawablePadding="7dp"
+            android:id="@+id/loginBtn"/>
+
+    </RelativeLayout>
+</ScrollView>

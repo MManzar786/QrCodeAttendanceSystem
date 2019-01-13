@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.ButtonFragment"
+    android:background="@color/white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:src="@drawable/dots"
+            android:scaleType="centerCrop"
+            android:id="@+id/pic"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/pic"
+            android:text="Sign Up"
+            android:background="@drawable/roundedfb"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="110dp"
+            android:paddingRight="110dp"
+            android:textAllCaps="false"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:clickable="true"
+            android:id="@+id/fbbtn"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OR"
+            android:textStyle="bold"
+            android:layout_below="@id/fbbtn"
+            android:textSize="12sp"
+            android:layout_centerHorizontal="true"
+            android:padding="15dp"
+            android:id="@+id/or"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:background="@drawable/rounded"
+            android:textColor="@color/white"
+            android:layout_below="@id/or"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="100dp"
+            android:paddingRight="95dp"
+            android:textAllCaps="false"
+            android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+            android:clickable="true"
+            android:drawablePadding="7dp"
+            android:id="@+id/googlebtn"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already Have An Account?"
+            android:id="@+id/text"
+            android:layout_below="@id/googlebtn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/text"
+            android:layout_below="@id/googlebtn"
+            android:layout_marginTop="10dp"
+            android:text=" LOG IN!"
+            android:clickable="true"
+            android:id="@+id/login"/>
+    </RelativeLayout>
+</ScrollView>
