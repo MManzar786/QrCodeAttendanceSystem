@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="qrcode.js"></script>
+	<title>Js Firebase</title>
+	<style type="text/css" >
+		
+		
+		#codeId{
+			padding: 20px;
+			font-size: 25px;
+			width: 38%;
+		}
+	</style>
+
+</head>
+<body style="background-color: blue">
+<div id="qrcode" style="width:15%; height:30%; margin-top:15px; position: absolute; right: 50px; background-color: lightblue; padding:50px; border-radius: 15px; ">
+	
+</div>
+
+	<div class="outerDiv">
+		<label style="font-size: 40px; color: white; font-family:Segoe UI; margin-top:100px;"> Enter Text:</label>
+		<input type="password" id="codeId" style="border-radius: 10px;" placeholder="e.g: Monday"><br>
+		<input type="button" value="Generate QR Code" onclick="makeCode()" style="background-color:green; color: white;  font-size: 30px; border-radius:10px; padding-left: 100px; padding-right: 100px; margin-left: 250px; margin-top:50px; font-family:Segoe UI;">
+	</div>
+
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-database.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBPo-CjkWB9t7b72VSpF6HUXyJqgjsEdZ0",
+    authDomain: "newproject-34a10.firebaseapp.com",
+    databaseURL: "https://newproject-34a10.firebaseio.com",
+    projectId: "newproject-34a10",
+    storageBucket: "newproject-34a10.appspot.com",
+    messagingSenderId: "836054826298"
+  };
+  firebase.initializeApp(config);
+</script>
+<script type="text/javascript">
+	var database = firebase.database();
+	var QrCode = document.getElementById("codeId");
+	function writeUserData() {
+		console.log(QrCode.value);
+		  firebase.database().ref('QRCode/').set({
+		    qrcode: QrCode.value
+  });
+}
+var qrcode = new QRCode(document.getElementById("qrcode"), {
+	width : 200,
+	height : 200,
+});
+function makeCode () {		
+	var elText = document.getElementById("codeId");
+	
+	if (!elText.value) {
+		alert("Input a text");
+		elText.focus();
+		return;
+	}
+	qrcode.makeCode(elText.value);
+	writeUserData();
+}
+</script>
+
+</html>
